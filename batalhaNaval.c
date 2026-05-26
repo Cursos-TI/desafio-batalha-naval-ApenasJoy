@@ -11,7 +11,7 @@ int main() {
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
     //Declarando as variáveis
-    int tabuleiro[10][10] = {0};
+    int tabuleiro[10][10];
     char *topo[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I', 'J'};
 
     //Aplicando um array de A a J para representar o topo do tabuleiro
