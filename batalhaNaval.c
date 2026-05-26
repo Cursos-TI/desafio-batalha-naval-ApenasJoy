@@ -14,6 +14,9 @@ int main() {
     int tabuleiro[10][10];
     char *topo[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I', 'J'};
 
+    //Apresentando o nome do jogo
+    printf("     Batalha Naval!\n");
+
     //Aplicando um array de A a J para representar o topo do tabuleiro
     printf("   ");
     for (int i = 0; i < 10; i++) {
@@ -28,8 +31,14 @@ int main() {
 
         for (int j = 0; j < 10; j++) {
 
+        // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
         //Trabalhando com operadores ternários para posicionar os navios
-        tabuleiro[i][j] = ((i == 3 && j >= 3 && j <= 5) || (j == 7 && i >= 6 && i <= 8) ? 3 : 0);
+        //Há quatro navios no tabuleiro, incluindo dois na diagonal.
+        tabuleiro[i][j] = ((i == 5 && j >= 2 && j <= 4) || 
+                            (j == 7 && i >= 6 && i <= 8) ||
+                            (i == j && j < 3) ||
+                            (i + j == 9 && i < 3) ? 3 : 0);
+
         printf(" %d", tabuleiro[i][j]);
     }
     printf("\n");
